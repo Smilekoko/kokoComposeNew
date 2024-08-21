@@ -8,6 +8,9 @@
       <SelectionState runConfigName="ArtistCardColumn">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="QinyuanSpringSnowColumn">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
