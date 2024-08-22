@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 fun QinyuanSpringSnowColumn() {
     Column {
         Text(text = "北国风光，千里冰封，万里雪飘。")
-        Text(text = "望长城内外，惟余莽莽，大河上下，顿时滔滔。")
+        Text(text = "望长城内外，惟余莽莽，大河上下，顿失滔滔。")
         Text(text = "山舞银蛇，原驰蜡象，欲与天公试比高。")
         Text(text = "须晴日，看红装素裹，分外妖娆。")
         Text(text = "江山如此多娇，引无数英雄竞折腰。")
