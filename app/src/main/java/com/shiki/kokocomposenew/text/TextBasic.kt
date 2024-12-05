@@ -1,14 +1,20 @@
 package com.shiki.kokocomposenew.text
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
 fun QinyuanSpringSnowColumn() {
-    Column {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(text = "北国风光，千里冰封，万里雪飘。")
         Text(text = "望长城内外，惟余莽莽，大河上下，顿失滔滔。")
         Text(text = "山舞银蛇，原驰蜡象，欲与天公试比高。")
