@@ -1,4 +1,4 @@
-package com.shiki.kokocomposenew.dialog
+package com.shiki.kokocomposenew.component.dialog
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
