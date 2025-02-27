@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
+import com.shiki.kokocomposenew.component.switch.SwitchExample
 import com.shiki.kokocomposenew.text.QinyuanSpringSnowColumn
 
 class XmlActivity : AppCompatActivity() {
@@ -26,7 +27,8 @@ class XmlActivity : AppCompatActivity() {
 
         binding.composeView.setContent {
 //            QinyuanSpringSnowColumn()
-            AlertDialogExample()
+//            AlertDialogExample()
+            SwitchExample()
         }
     }
 }
