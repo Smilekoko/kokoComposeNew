@@ -1,4 +1,4 @@
-package com.shiki.kokocomposenew.text
+package com.shiki.kokocomposenew.component.text
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
