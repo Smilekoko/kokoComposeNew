@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
 import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
@@ -30,7 +31,8 @@ class XmlActivity : AppCompatActivity() {
 //            QinyuanSpringSnowColumn()
 //            AlertDialogExample()
 //            SwitchExample()
-            RadioButtonSingleSelection()
+//            RadioButtonSingleSelection()
+            AssistChipExample()
         }
     }
 }
