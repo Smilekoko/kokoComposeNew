@@ -9,6 +9,8 @@ import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
 import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
+import com.shiki.kokocomposenew.component.slider.SliderAdvancedExample
+import com.shiki.kokocomposenew.component.slider.SliderExample
 import com.shiki.kokocomposenew.component.snackbar.SnackbarBaseExample
 import com.shiki.kokocomposenew.component.switch.SwitchExample
 import com.shiki.kokocomposenew.component.text.QinyuanSpringSnowColumn
@@ -34,7 +36,8 @@ class XmlActivity : AppCompatActivity() {
 //            SwitchExample()
 //            RadioButtonSingleSelection()
 //            AssistChipExample()
-            SnackbarBaseExample()
+//            SnackbarBaseExample()
+            SliderAdvancedExample()
         }
     }
 }
