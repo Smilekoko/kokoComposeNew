@@ -31,21 +31,6 @@ fun ColumnExample(messages: List<String> = listOf("koko", "koko")) {
 
 }
 
-@Preview
-@Composable
-fun RowExample(messages: List<String> = listOf("koko", "koko", "koko")) {
-    Row(
-        modifier = Modifier
-            .background(Color.White)
-            .fillMaxWidth()
-    ) {
-        messages.forEach {
-            Text(modifier = Modifier.padding(5.dp), text = it)
-        }
-    }
-
-
-}
 
 @Preview
 @Composable
