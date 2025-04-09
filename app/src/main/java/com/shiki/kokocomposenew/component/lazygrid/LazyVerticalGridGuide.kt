@@ -29,7 +29,7 @@ import com.shiki.kokocomposenew.bean.ImageBean
 @Preview
 @Composable
 fun LazyVerticalGridExample() {
-    
+
     val imageList = remember {
         mutableStateListOf(
             ImageBean(1, R.drawable.pika),
@@ -62,14 +62,14 @@ fun LazyVerticalGridExample() {
                     .padding(5.dp)
                     // 保持图片宽高比为1:1
                     .aspectRatio(1f)
-                    .animateItem(
-                        fadeInSpec = tween(durationMillis = 200),
-                        fadeOutSpec = tween(durationMillis = 100),
-                        placementSpec = spring(
-                            stiffness = Spring.StiffnessLow,
-                            dampingRatio = Spring.DampingRatioMediumBouncy
-                        )
-                    )
+//                    .animateItem(
+//                        fadeInSpec = tween(durationMillis = 200),
+//                        fadeOutSpec = tween(durationMillis = 100),
+//                        placementSpec = spring(
+//                            stiffness = Spring.StiffnessLow,
+//                            dampingRatio = Spring.DampingRatioMediumBouncy
+//                        )
+//                    )
                     .clickable {
                         // 点击时从列表中移除该项
                         imageList.remove(it)
