@@ -5,15 +5,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.postDelayed
+import androidx.lifecycle.lifecycleScope
 import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
+import com.shiki.kokocomposenew.component.lazygrid.LazyVerticalGridExample
 import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
 import com.shiki.kokocomposenew.component.slider.SliderAdvancedExample
 import com.shiki.kokocomposenew.component.slider.SliderExample
 import com.shiki.kokocomposenew.component.snackbar.SnackbarBaseExample
 import com.shiki.kokocomposenew.component.switch.SwitchExample
 import com.shiki.kokocomposenew.component.text.QinyuanSpringSnowColumn
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class XmlActivity : AppCompatActivity() {
 
@@ -30,14 +35,20 @@ class XmlActivity : AppCompatActivity() {
             insets
         }
 
-        binding.composeView.setContent {
+
+        binding.root.postDelayed({
+            binding.composeView.setContent {
 //            QinyuanSpringSnowColumn()
 //            AlertDialogExample()
 //            SwitchExample()
 //            RadioButtonSingleSelection()
 //            AssistChipExample()
 //            SnackbarBaseExample()
-            SliderAdvancedExample()
-        }
+//            SliderAdvancedExample()
+                LazyVerticalGridExample()
+            }
+        }, 1000)
+
+
     }
 }
