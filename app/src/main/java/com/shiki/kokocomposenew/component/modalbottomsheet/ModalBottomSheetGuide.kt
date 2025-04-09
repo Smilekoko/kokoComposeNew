@@ -35,7 +35,7 @@ fun ModalBottomSheetExample() {
 
     var showBottomSheet by remember { mutableStateOf(true) }
     val sheetState = rememberModalBottomSheetState(
-        skipPartiallyExpanded = false, // 允许部分展开
+        skipPartiallyExpanded = false, // 是否跳过部分展开
         confirmValueChange = { sheetValue ->
             // 仅允许程序控制状态变化，禁止用户拖动
 //            true // 返回 false 表示拒绝用户触发的状态变化
@@ -84,7 +84,7 @@ fun ModalBottomSheetExample() {
                                     sheetState.partialExpand() // 收起至250dp
                                 }
                             }
-                            
+
                         }) {
                         Text("Hide bottom sheet")
                     }

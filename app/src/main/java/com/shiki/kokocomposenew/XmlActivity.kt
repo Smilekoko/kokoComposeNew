@@ -14,6 +14,7 @@ import com.shiki.kokocomposenew.component.lazygrid.LazyVerticalGridExample
 import com.shiki.kokocomposenew.component.modalbottomsheet.ModalBottomSheetExample
 import com.shiki.kokocomposenew.component.page.HorizontalPagerExample
 import com.shiki.kokocomposenew.component.page.VerticalPagerExample
+import com.shiki.kokocomposenew.component.progressindicator.LinearProgressIndicatorGuideExample
 import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
 import com.shiki.kokocomposenew.component.slider.SliderAdvancedExample
 import com.shiki.kokocomposenew.component.slider.SliderExample
@@ -39,7 +40,6 @@ class XmlActivity : AppCompatActivity() {
             insets
         }
 
-
         binding.root.postDelayed({
             binding.composeView.setContent {
 //            QinyuanSpringSnowColumn()
@@ -52,7 +52,8 @@ class XmlActivity : AppCompatActivity() {
 //                ModifierOrderExample()
 //                HorizontalPagerExample()
 //                VerticalPagerExample()
-                ModalBottomSheetExample()
+//                ModalBottomSheetExample()
+                LinearProgressIndicatorGuideExample()
             }
         }, 0)
 

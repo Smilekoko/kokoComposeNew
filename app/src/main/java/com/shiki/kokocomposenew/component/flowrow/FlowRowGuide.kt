@@ -13,18 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import kotlin.random.Random
+import com.shiki.kokocomposenew.modifier.randomBackground
 
-
-// 定义一个扩展函数，生成随机背景色的 Modifier
-fun Modifier.randomBackground(): Modifier = this.background(
-    Color(
-        red = Random.nextFloat(),
-        green = Random.nextFloat(),
-        blue = Random.nextFloat(),
-        alpha = 1f
-    )
-)
 
 @OptIn(ExperimentalLayoutApi::class)
 @Preview
