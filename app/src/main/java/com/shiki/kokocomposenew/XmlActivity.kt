@@ -17,6 +17,7 @@ import com.shiki.kokocomposenew.component.slider.SliderExample
 import com.shiki.kokocomposenew.component.snackbar.SnackbarBaseExample
 import com.shiki.kokocomposenew.component.switch.SwitchExample
 import com.shiki.kokocomposenew.component.text.QinyuanSpringSnowColumn
+import com.shiki.kokocomposenew.modifier.ModifierOrderExample
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -45,9 +46,9 @@ class XmlActivity : AppCompatActivity() {
 //            AssistChipExample()
 //            SnackbarBaseExample()
 //            SliderAdvancedExample()
-                LazyVerticalGridExample()
+                ModifierOrderExample()
             }
-        }, 1000)
+        }, 0)
 
 
     }
