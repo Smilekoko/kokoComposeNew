@@ -11,6 +11,7 @@ import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
 import com.shiki.kokocomposenew.component.lazygrid.LazyVerticalGridExample
+import com.shiki.kokocomposenew.component.modalbottomsheet.ModalBottomSheetExample
 import com.shiki.kokocomposenew.component.page.HorizontalPagerExample
 import com.shiki.kokocomposenew.component.page.VerticalPagerExample
 import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
@@ -49,8 +50,9 @@ class XmlActivity : AppCompatActivity() {
 //            SnackbarBaseExample()
 //            SliderAdvancedExample()
 //                ModifierOrderExample()
-                HorizontalPagerExample()
+//                HorizontalPagerExample()
 //                VerticalPagerExample()
+                ModalBottomSheetExample()
             }
         }, 0)
 
