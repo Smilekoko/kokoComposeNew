@@ -74,5 +74,8 @@ fun HorizontalPagerExample() {
         }
     }
 
-
 }
+
+
+
+
