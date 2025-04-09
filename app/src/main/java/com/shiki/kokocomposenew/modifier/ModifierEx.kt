@@ -7,7 +7,7 @@ import kotlin.random.Random
 
 // 定义一个扩展函数，生成随机背景色的 Modifier
 fun Modifier.randomBackground(): Modifier {
-    return this
+//    return this
     return this.background(
         Color(
             red = Random.nextFloat(),

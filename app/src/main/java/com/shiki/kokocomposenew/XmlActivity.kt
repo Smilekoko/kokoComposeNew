@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.postDelayed
 import androidx.lifecycle.lifecycleScope
+import com.shiki.kokocomposenew.animation.AnimatedVisibilityExample
 import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
@@ -53,7 +54,8 @@ class XmlActivity : AppCompatActivity() {
 //                HorizontalPagerExample()
 //                VerticalPagerExample()
 //                ModalBottomSheetExample()
-                LinearProgressIndicatorGuideExample()
+//                LinearProgressIndicatorGuideExample()
+                AnimatedVisibilityExample()
             }
         }, 0)
 
