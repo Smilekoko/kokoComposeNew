@@ -62,6 +62,7 @@ fun LazyVerticalGridExample() {
                     .padding(5.dp)
                     // 保持图片宽高比为1:1
                     .aspectRatio(1f)
+                    //item动画
 //                    .animateItem(
 //                        fadeInSpec = tween(durationMillis = 200),
 //                        fadeOutSpec = tween(durationMillis = 100),
