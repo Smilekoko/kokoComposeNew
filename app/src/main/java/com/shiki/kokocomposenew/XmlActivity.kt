@@ -14,6 +14,7 @@ import com.shiki.kokocomposenew.animation.AnimateFloatAsStateExample
 import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateExample
 import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateLayoutExample
 import com.shiki.kokocomposenew.animation.AnimatedVisibilityExample
+import com.shiki.kokocomposenew.animation.TextMotionAnimatedExample
 import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
 import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
@@ -65,7 +66,8 @@ class XmlActivity : AppCompatActivity() {
 //                AnimateColorAsStateExample()
 //                AnimateContentSizeExample()
 //                AnimateIntOffsetAsStateLayoutExample()
-                AnimateDpAsStateExample()
+//                AnimateDpAsStateExample()
+                TextMotionAnimatedExample()
             }
         }, 0)
 
