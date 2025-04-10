@@ -9,7 +9,10 @@ import androidx.core.view.postDelayed
 import androidx.lifecycle.lifecycleScope
 import com.shiki.kokocomposenew.animation.AnimateColorAsStateExample
 import com.shiki.kokocomposenew.animation.AnimateContentSizeExample
+import com.shiki.kokocomposenew.animation.AnimateDpAsStateExample
 import com.shiki.kokocomposenew.animation.AnimateFloatAsStateExample
+import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateExample
+import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateLayoutExample
 import com.shiki.kokocomposenew.animation.AnimatedVisibilityExample
 import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
@@ -60,7 +63,9 @@ class XmlActivity : AppCompatActivity() {
 //                LinearProgressIndicatorGuideExample()
 //                AnimatedVisibilityExample()
 //                AnimateColorAsStateExample()
-                AnimateContentSizeExample()
+//                AnimateContentSizeExample()
+//                AnimateIntOffsetAsStateLayoutExample()
+                AnimateDpAsStateExample()
             }
         }, 0)
 
