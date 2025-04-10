@@ -32,8 +32,8 @@ class MainActivity : ComponentActivity() {
                     Box(
                         modifier =
                         Modifier
-                            .fillMaxSize()
-                            .randomBackground(),
+                            .fillMaxSize(),
+//                            .randomBackground(),
                         contentAlignment = Alignment.Center
                     ) {
                         Greeting(

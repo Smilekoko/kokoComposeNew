@@ -7,6 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.postDelayed
 import androidx.lifecycle.lifecycleScope
+import com.shiki.kokocomposenew.animation.AnimateColorAsStateExample
+import com.shiki.kokocomposenew.animation.AnimateContentSizeExample
+import com.shiki.kokocomposenew.animation.AnimateFloatAsStateExample
 import com.shiki.kokocomposenew.animation.AnimatedVisibilityExample
 import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
@@ -55,7 +58,9 @@ class XmlActivity : AppCompatActivity() {
 //                VerticalPagerExample()
 //                ModalBottomSheetExample()
 //                LinearProgressIndicatorGuideExample()
-                AnimatedVisibilityExample()
+//                AnimatedVisibilityExample()
+//                AnimateColorAsStateExample()
+                AnimateContentSizeExample()
             }
         }, 0)
 
