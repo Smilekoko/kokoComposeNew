@@ -1,5 +1,6 @@
 package com.shiki.kokocomposenew.animation
 
+import android.util.Log
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -75,6 +76,7 @@ fun TextMotionAnimatedExample() {
                 .layout { measurable, constraints ->
 
                     val placeable = measurable.measure(constraints)
+                    Log.e("placeable", "${placeable.height} ${placeable.width}")
 
                     setTextHeight(with(density) { placeable.height.toDp() })
 
