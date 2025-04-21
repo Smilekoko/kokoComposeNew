@@ -21,7 +21,6 @@ import androidx.compose.ui.unit.dp
 //Compose 有一项规则，即，子项只能测量一次，测量两次就会引发运行时异常。
 //有时需要先收集一些关于子项的信息，然后再测量子项。
 //借助 IntrinsicSize[固有特性] ，可以先查询子项，然后再进行实际测量。
-
 @Preview
 @Composable
 fun IntrinsicSizeExample() {
