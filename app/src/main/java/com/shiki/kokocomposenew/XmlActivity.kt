@@ -51,7 +51,7 @@ class XmlActivity : AppCompatActivity() {
 
         binding.root.postDelayed({
             binding.composeView.setContent {
-//            QinyuanSpringSnowColumn()
+                QinyuanSpringSnowColumn()
 //            AlertDialogExample()
 //            SwitchExample()
 //            RadioButtonSingleSelection()
@@ -69,7 +69,7 @@ class XmlActivity : AppCompatActivity() {
 //                AnimateIntOffsetAsStateLayoutExample()
 //                AnimateDpAsStateExample()
 //                TextMotionAnimatedExample()
-                BadgedBoxExample()
+//                BadgedBoxExample()
             }
         }, 0)
 
