@@ -8,5 +8,6 @@ object HomeDataProvider {
     val homeScreenListItems =
         listOf(
             HomeScreenItems.Dialogs,
+            HomeScreenItems.TabLayout,
         )
 }

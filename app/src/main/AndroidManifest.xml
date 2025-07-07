@@ -32,14 +32,24 @@
             android:name=".component.dialog.DialogActivity"
             android:exported="true"
             android:label="@string/title_activity_dialog"
-            android:theme="@style/Theme.KokoComposeNew" >
+            android:theme="@style/Theme.KokoComposeNew">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".component.tablayout.TabLayoutActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tab_layout"
+            android:theme="@style/Theme.KokoComposeNew">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
