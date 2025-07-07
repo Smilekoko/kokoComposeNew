@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-fun AlertDialogExample() {
+fun AlertDialogExample(onDismiss: () -> Unit = {}) {
 
     val openAlertDialog = remember { mutableStateOf(true) }
 
@@ -43,6 +43,7 @@ fun AlertDialogExample() {
             dismissButton = {
                 TextButton(onClick = {
                     openAlertDialog.value = false
+                    onDismiss.invoke()
                 }) {
                     Text("Dismiss")
                 }

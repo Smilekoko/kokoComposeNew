@@ -74,7 +74,6 @@ fun HomeScreenListItemView(
         Button(
             onClick = {}, modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
         ) {
             Text(
                 text = item.name,

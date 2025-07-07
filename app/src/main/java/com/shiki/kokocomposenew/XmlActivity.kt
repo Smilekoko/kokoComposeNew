@@ -31,6 +31,7 @@ import com.shiki.kokocomposenew.component.snackbar.SnackbarBaseExample
 import com.shiki.kokocomposenew.component.switch.SwitchExample
 import com.shiki.kokocomposenew.component.text.QinyuanSpringSnowColumn
 import com.shiki.kokocomposenew.modifier.ModifierOrderExample
+import com.shiki.kokocomposenew.ui.home.HomeScreen
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -51,7 +52,8 @@ class XmlActivity : AppCompatActivity() {
 
         binding.root.postDelayed({
             binding.composeView.setContent {
-                QinyuanSpringSnowColumn()
+                HomeScreen()
+//                QinyuanSpringSnowColumn()
 //            AlertDialogExample()
 //            SwitchExample()
 //            RadioButtonSingleSelection()
