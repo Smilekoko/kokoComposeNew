@@ -2,6 +2,7 @@
 
 package com.shiki.kokocomposenew.component.tablayout
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,6 +17,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
@@ -33,11 +35,14 @@ class TabLayoutActivity : ComponentActivity() {
 
 @Composable
 fun TabTabLayoutScreen() {
+    val context = LocalContext.current
     Scaffold(
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = { }) {
+                    IconButton(onClick = {
+                        (context as Activity).finish()
+                    }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "ArrowBack"

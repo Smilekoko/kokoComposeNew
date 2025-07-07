@@ -22,8 +22,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.shiki.kokocomposenew.component.dialog.DialogActivity
+import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
 import com.shiki.kokocomposenew.data.HomeScreenItems
 import com.shiki.kokocomposenew.data.HomeScreenItems.Dialogs
+import com.shiki.kokocomposenew.data.HomeScreenItems.TabLayout
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 
@@ -78,7 +80,16 @@ fun HomeScreenListItemView(
     ) {
         Button(
             onClick = {
-                context.startActivity(Intent(context, DialogActivity::class.java))
+                when (item) {
+                    is Dialogs -> {
+                        context.startActivity(Intent(context, DialogActivity::class.java))
+                    }
+
+                    is TabLayout -> {
+                        context.startActivity(Intent(context, TabLayoutActivity::class.java))
+                    }
+
+                }
             }, modifier = Modifier
                 .fillMaxWidth()
         ) {
