@@ -1,5 +1,7 @@
 package com.shiki.kokocomposenew.ui.home
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,15 +17,17 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.shiki.kokocomposenew.component.dialog.DialogActivity
 import com.shiki.kokocomposenew.data.HomeScreenItems
 import com.shiki.kokocomposenew.data.HomeScreenItems.Dialogs
+import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview
 @Composable
 fun HomeScreen(
 ) {
@@ -40,27 +44,28 @@ fun HomeScreen(
 }
 
 
-@Preview
 @Composable
 fun HomeScreenContent(
     modifier: Modifier = Modifier,
     list: List<HomeScreenItems> = listOf(Dialogs)
 ) {
+    val context = LocalContext.current
+
     LazyColumn(
         modifier = modifier
             .fillMaxWidth()
             .padding(8.dp)
     ) {
         items(items = list, itemContent = {
-            HomeScreenListItemView(it)
+            HomeScreenListItemView(context, it)
         })
     }
 }
 
 
 @Composable
-@Preview
 fun HomeScreenListItemView(
+    context: Context,
     item: HomeScreenItems = Dialogs
 ) {
     Card(
@@ -72,7 +77,9 @@ fun HomeScreenListItemView(
             .padding(8.dp)
     ) {
         Button(
-            onClick = {}, modifier = Modifier
+            onClick = {
+                context.startActivity(Intent(context, DialogActivity::class.java))
+            }, modifier = Modifier
                 .fillMaxWidth()
         ) {
             Text(
@@ -82,5 +89,13 @@ fun HomeScreenListItemView(
                 style = MaterialTheme.typography.labelLarge
             )
         }
+    }
+}
+
+@Preview
+@Composable
+fun HomeHomeScreenPreview() {
+    KokoComposeNewTheme {
+        HomeScreen()
     }
 }
