@@ -33,6 +33,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.shiki.kokocomposenew.ui.animation.AnimationScreen
 import com.shiki.kokocomposenew.ui.home.HomeScreen
+import com.shiki.kokocomposenew.ui.template.TemplateScreen
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 
@@ -73,7 +74,7 @@ fun MainScreenContent(
             when (screen) {
                 BottomNavType.HOME -> HomeScreen()
                 BottomNavType.ANIMATION -> AnimationScreen()
-                BottomNavType.TEMPLATE -> HomeScreen()
+                BottomNavType.TEMPLATE -> TemplateScreen()
             }
         }
     }
@@ -132,6 +133,25 @@ fun BottomNavigationContent(
             },
             onClick = {
                 homeScreenState.value = BottomNavType.ANIMATION
+                animate = true
+            },
+            colors = navItemColors
+        )
+        NavigationBarItem(
+            selected = homeScreenState.value == BottomNavType.TEMPLATE,
+            icon = {
+                Icon(
+                    ImageVector.vectorResource(R.drawable.template),
+                    contentDescription = "Template",
+                    modifier = Modifier,
+                    tint = if (homeScreenState.value == BottomNavType.TEMPLATE) selectedIconColor else unselectedIconColor
+                )
+            },
+            label = {
+                Text("Template", style = TextStyle(fontSize = 12.sp))
+            },
+            onClick = {
+                homeScreenState.value = BottomNavType.TEMPLATE
                 animate = true
             },
             colors = navItemColors
