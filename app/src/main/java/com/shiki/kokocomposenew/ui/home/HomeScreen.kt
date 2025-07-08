@@ -84,6 +84,10 @@ fun HomeScreenListItemView(
                         context.startActivity(Intent(context, TextActivity::class.java))
                     }
 
+                    is HomeScreenItems.IconItem -> {
+
+                    }
+
                     is HomeScreenItems.DialogsItem -> {
                         context.startActivity(Intent(context, DialogActivity::class.java))
                     }
