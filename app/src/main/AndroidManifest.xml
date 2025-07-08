@@ -52,7 +52,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".component.text.TextActivity"
             android:exported="true"
@@ -64,7 +63,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".component.button.ButtonActivity"
+            android:exported="true"
+            android:label="@string/title_activity_button"
+            android:theme="@style/Theme.KokoComposeNew">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ object HomeDataProvider {
         listOf(
             HomeScreenItems.TextItem,
             HomeScreenItems.IconItem,
+            HomeScreenItems.ButtonItem,
             HomeScreenItems.DialogsItem,
             HomeScreenItems.TabLayoutItem,
         )

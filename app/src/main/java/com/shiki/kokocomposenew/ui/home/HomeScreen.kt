@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.shiki.kokocomposenew.component.button.ButtonActivity
 import com.shiki.kokocomposenew.component.dialog.DialogActivity
 import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
 import com.shiki.kokocomposenew.component.text.TextActivity
@@ -85,7 +86,10 @@ fun HomeScreenListItemView(
                     }
 
                     is HomeScreenItems.IconItem -> {
+                    }
 
+                    is HomeScreenItems.ButtonItem -> {
+                        context.startActivity(Intent(context, ButtonActivity::class.java))
                     }
 
                     is HomeScreenItems.DialogsItem -> {

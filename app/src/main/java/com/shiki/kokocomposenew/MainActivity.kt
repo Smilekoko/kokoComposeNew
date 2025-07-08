@@ -7,14 +7,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
@@ -125,7 +122,7 @@ fun BottomNavigationContent(
                     ImageVector.vectorResource(R.drawable.play),
                     contentDescription = "Animation",
                     modifier = Modifier.graphicsLayer(
-                        rotationZ = animateFloatAsState(if (animate) 0f else 720f, tween(2000)).value
+//                        rotationZ = animateFloatAsState(if (animate) 0f else 720f, tween(2000)).value
                     ),
                     tint = if (homeScreenState.value == BottomNavType.ANIMATION) selectedIconColor else unselectedIconColor
                 )

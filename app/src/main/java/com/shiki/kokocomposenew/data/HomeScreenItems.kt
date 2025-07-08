@@ -6,6 +6,7 @@ sealed class HomeScreenItems {
     object TabLayoutItem : HomeScreenItems()
     object TextItem : HomeScreenItems()
     object IconItem : HomeScreenItems()
+    object ButtonItem : HomeScreenItems()
 
     val name: String
         get() = when (this) {
@@ -13,5 +14,6 @@ sealed class HomeScreenItems {
             is TabLayoutItem -> "TabLayout"
             is TextItem -> "Text"
             is IconItem -> "Icon"
+            is ButtonItem -> "Button"
         }
 }
