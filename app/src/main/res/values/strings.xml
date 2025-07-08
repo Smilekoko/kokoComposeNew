@@ -36,4 +36,5 @@
     </string>
     <string name="title_activity_dialog">DialogActivity</string>
     <string name="title_activity_tab_layout">TabLayoutActivity</string>
+    <string name="title_activity_text">TextActivity</string>
 </resources>

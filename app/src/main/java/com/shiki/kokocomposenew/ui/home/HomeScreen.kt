@@ -23,9 +23,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.shiki.kokocomposenew.component.dialog.DialogActivity
 import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
+import com.shiki.kokocomposenew.component.text.TextActivity
 import com.shiki.kokocomposenew.data.HomeScreenItems
-import com.shiki.kokocomposenew.data.HomeScreenItems.Dialogs
-import com.shiki.kokocomposenew.data.HomeScreenItems.TabLayout
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 
@@ -49,7 +48,7 @@ fun HomeScreen(
 @Composable
 fun HomeScreenContent(
     modifier: Modifier = Modifier,
-    list: List<HomeScreenItems> = listOf(Dialogs)
+    list: List<HomeScreenItems> = listOf(HomeScreenItems.DialogsItem)
 ) {
     val context = LocalContext.current
 
@@ -68,7 +67,7 @@ fun HomeScreenContent(
 @Composable
 fun HomeScreenListItemView(
     context: Context,
-    item: HomeScreenItems = Dialogs
+    item: HomeScreenItems = HomeScreenItems.DialogsItem
 ) {
     Card(
         colors = CardDefaults.cardColors(
@@ -81,11 +80,15 @@ fun HomeScreenListItemView(
         Button(
             onClick = {
                 when (item) {
-                    is Dialogs -> {
+                    is HomeScreenItems.TextItem -> {
+                        context.startActivity(Intent(context, TextActivity::class.java))
+                    }
+
+                    is HomeScreenItems.DialogsItem -> {
                         context.startActivity(Intent(context, DialogActivity::class.java))
                     }
 
-                    is TabLayout -> {
+                    is HomeScreenItems.TabLayoutItem -> {
                         context.startActivity(Intent(context, TabLayoutActivity::class.java))
                     }
 
