@@ -3,6 +3,7 @@
 package com.shiki.kokocomposenew.ui.template
 
 import android.app.Activity
+import android.content.Intent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -17,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.shiki.kokocomposenew.template.TemplateActivity
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 val templates =
@@ -48,7 +50,9 @@ fun TemplateScreenContent(modifier: Modifier) {
             val template = templates[index]
             Button(
                 onClick = {
-                    (context as Activity)
+                    (context as Activity).startActivity(Intent(context, TemplateActivity::class.java).apply {
+                        putExtra("templateType", template)
+                    })
                 },
                 modifier = Modifier
                     .fillMaxWidth()

@@ -38,4 +38,5 @@
     <string name="title_activity_tab_layout">TabLayoutActivity</string>
     <string name="title_activity_text">TextActivity</string>
     <string name="title_activity_button">ButtonActivity</string>
+    <string name="title_activity_template">TemplateActivity</string>
 </resources>

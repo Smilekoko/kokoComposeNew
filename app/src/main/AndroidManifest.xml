@@ -29,6 +29,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".template.TemplateActivity"
+            android:exported="true"
+            android:label="@string/title_activity_template"
+            android:theme="@style/Theme.KokoComposeNew">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".component.dialog.DialogActivity"
             android:exported="true"
             android:label="@string/title_activity_dialog"

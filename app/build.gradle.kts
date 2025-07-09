@@ -64,8 +64,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    val nav_version = "2.8.4"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    val lottieVersion = "6.3.0"
+    implementation("com.airbnb.android:lottie-compose:$lottieVersion")
+
 
     //https://developer.android.com/develop/ui/compose/bom/bom-mapping
     implementation(platform(libs.androidx.compose.bom))
@@ -74,8 +75,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    val navVersion = "2.8.4"
+    implementation("androidx.navigation:navigation-compose:$navVersion")
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)

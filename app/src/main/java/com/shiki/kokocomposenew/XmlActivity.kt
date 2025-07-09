@@ -5,35 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.postDelayed
-import androidx.lifecycle.lifecycleScope
-import com.shiki.kokocomposenew.animation.AnimateColorAsStateExample
-import com.shiki.kokocomposenew.animation.AnimateContentSizeExample
-import com.shiki.kokocomposenew.animation.AnimateDpAsStateExample
-import com.shiki.kokocomposenew.animation.AnimateFloatAsStateExample
-import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateExample
-import com.shiki.kokocomposenew.animation.AnimateIntOffsetAsStateLayoutExample
-import com.shiki.kokocomposenew.animation.AnimatedVisibilityExample
-import com.shiki.kokocomposenew.animation.TextMotionAnimatedExample
-import com.shiki.kokocomposenew.component.badge.BadgedBoxExample
-import com.shiki.kokocomposenew.component.chip.AssistChipExample
 import com.shiki.kokocomposenew.databinding.ActivityXmlBinding
-import com.shiki.kokocomposenew.component.dialog.AlertDialogExample
-import com.shiki.kokocomposenew.component.lazygrid.LazyVerticalGridExample
-import com.shiki.kokocomposenew.component.modalbottomsheet.ModalBottomSheetExample
-import com.shiki.kokocomposenew.component.page.HorizontalPagerExample
-import com.shiki.kokocomposenew.component.page.VerticalPagerExample
-import com.shiki.kokocomposenew.component.progressindicator.LinearProgressIndicatorGuideExample
-import com.shiki.kokocomposenew.component.radioButton.RadioButtonSingleSelection
-import com.shiki.kokocomposenew.component.slider.SliderAdvancedExample
-import com.shiki.kokocomposenew.component.slider.SliderExample
-import com.shiki.kokocomposenew.component.snackbar.SnackbarBaseExample
-import com.shiki.kokocomposenew.component.switch.SwitchExample
-import com.shiki.kokocomposenew.component.text.QinyuanSpringSnowColumn
-import com.shiki.kokocomposenew.modifier.ModifierOrderExample
 import com.shiki.kokocomposenew.ui.home.HomeScreen
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class XmlActivity : AppCompatActivity() {
 
@@ -53,25 +26,6 @@ class XmlActivity : AppCompatActivity() {
         binding.root.postDelayed({
             binding.composeView.setContent {
                 HomeScreen()
-//                QinyuanSpringSnowColumn()
-//            AlertDialogExample()
-//            SwitchExample()
-//            RadioButtonSingleSelection()
-//            AssistChipExample()
-//            SnackbarBaseExample()
-//            SliderAdvancedExample()
-//                ModifierOrderExample()
-//                HorizontalPagerExample()
-//                VerticalPagerExample()
-//                ModalBottomSheetExample()
-//                LinearProgressIndicatorGuideExample()
-//                AnimatedVisibilityExample()
-//                AnimateColorAsStateExample()
-//                AnimateContentSizeExample()
-//                AnimateIntOffsetAsStateLayoutExample()
-//                AnimateDpAsStateExample()
-//                TextMotionAnimatedExample()
-//                BadgedBoxExample()
             }
         }, 0)
 
