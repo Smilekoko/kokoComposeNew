@@ -6,12 +6,13 @@ plugins {
 
 android {
     namespace = "com.shiki.kokocomposenew"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.shiki.kokocomposenew"
         minSdk = 24
-        targetSdk = 34
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -75,6 +76,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    //https://developer.android.com/jetpack/androidx/releases/compose
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     val navVersion = "2.8.4"
     implementation("androidx.navigation:navigation-compose:$navVersion")
