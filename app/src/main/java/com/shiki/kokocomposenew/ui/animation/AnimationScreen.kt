@@ -12,6 +12,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.shiki.kokocomposenew.animation.AnimateVisibilityItem
+import com.shiki.kokocomposenew.animation.LikeButtonAnimationItem
+import com.shiki.kokocomposenew.animation.ShimmerLoadingAnimationItem
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -35,6 +38,8 @@ fun AnimationScreenContent(modifier: Modifier = Modifier) {
         modifier = modifier.padding(horizontal = 16.dp),
     ) {
         item { LikeButtonAnimationItem() }
+        item { ShimmerLoadingAnimationItem() }
+        item { AnimateVisibilityItem() }
     }
 }
 
