@@ -6,11 +6,13 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -28,6 +30,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.autofill.ContentType
+import androidx.compose.ui.draw.BlurredEdgeTreatment
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -37,6 +42,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import coil3.request.ImageRequest
+import coil3.request.crossfade
+import coil3.request.transformations
 import com.shiki.kokocomposenew.R
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
@@ -76,6 +84,8 @@ fun ImageScreen() {
             item { ImageContentScale() }
             item { ImageClip() }
             item { ImageBorder() }
+            item { ImageAspectRatio() }
+            item { ImageBlur() }
         }
     }
 }
@@ -163,6 +173,51 @@ fun ImageBorder() {
                 )
                 .padding(8.dp)
                 .clip(CircleShape)
+        )
+        HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp), thickness = 1.dp)
+    }
+}
+
+@Composable
+fun ImageAspectRatio() {
+    Column {
+        Text("Image aspectRatio")
+        AsyncImage(
+            model = R.drawable.suijiangui,
+            contentDescription = "",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .padding(top = 8.dp)
+                .width(120.dp)
+                .align(Alignment.CenterHorizontally)
+                .aspectRatio(16f / 9f)
+        )
+        HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp), thickness = 1.dp)
+    }
+}
+
+@Composable
+fun ImageBlur() {
+    val context = LocalContext.current
+    val imageRequest = ImageRequest.Builder(context)
+        .data(R.drawable.wallpaper) // The image to load
+        .crossfade(true) // Optional: for a smooth fade-in effect
+        .build()
+
+    Column {
+        Text("Image blur")
+        AsyncImage(
+            model = imageRequest,
+            contentDescription = "",
+            modifier = Modifier
+                .padding(top = 8.dp)
+                .width(120.dp)
+                .blur(
+                    radiusX = 2.dp,
+                    radiusY = 2.dp,
+                    edgeTreatment = BlurredEdgeTreatment.Unbounded // Or Clamp
+                )
+                .align(Alignment.CenterHorizontally)
         )
         HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp), thickness = 1.dp)
     }
