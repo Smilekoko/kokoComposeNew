@@ -28,6 +28,7 @@ import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
 import com.shiki.kokocomposenew.component.text.TextActivity
 import com.shiki.kokocomposenew.bean.HomeScreenItems
 import com.shiki.kokocomposenew.component.image.ImageActivity
+import com.shiki.kokocomposenew.component.menu.MenuActivity
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 val homeScreenListItems =
@@ -36,6 +37,7 @@ val homeScreenListItems =
         HomeScreenItems.ImageItem,
         HomeScreenItems.ButtonItem,
         HomeScreenItems.DialogsItem,
+        HomeScreenItems.MenuItem,
         HomeScreenItems.TabLayoutItem,
         HomeScreenItems.PullToRefreshBoxItem,
     )
@@ -119,6 +121,9 @@ fun HomeScreenListItemView(
                         context.startActivity(Intent(context, ImageActivity::class.java))
                     }
 
+                    is HomeScreenItems.MenuItem -> {
+                        context.startActivity(Intent(context, MenuActivity::class.java))
+                    }
                 }
             }, modifier = Modifier
                 .fillMaxWidth()

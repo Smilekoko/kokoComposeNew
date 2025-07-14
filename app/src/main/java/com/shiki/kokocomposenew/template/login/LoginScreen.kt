@@ -4,6 +4,7 @@ package com.shiki.kokocomposenew.template.login
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.LocalOverscrollConfiguration
+import androidx.compose.foundation.LocalOverscrollFactory
 import androidx.compose.foundation.OverscrollEffect
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -75,8 +76,8 @@ fun LoginScreen() {
 
         // 使用 CompositionLocalProvider 包裹需要禁用 overscroll 效果的组件
         CompositionLocalProvider(
-            LocalOverscrollConfiguration provides null
-        ){
+            LocalOverscrollFactory provides null
+        ) {
             LazyColumn(
                 modifier = Modifier
                     .padding(paddingValues)
@@ -84,7 +85,7 @@ fun LoginScreen() {
                     .padding(horizontal = 16.dp)
             ) {
 
-                item { Spacer(modifier = Modifier.height(20.dp)) }
+                item { Spacer(modifier = Modifier.height(8.dp)) }
                 item { LottieWorkingLoadingView() }
                 item {
                     Text(
@@ -112,10 +113,10 @@ fun LoginScreen() {
                             focusedLabelColor = if (isFocused) Color.Blue else Color.Gray
                         ),
                         keyboardOptions =
-                            KeyboardOptions(
-                                keyboardType = KeyboardType.Text,
-                                imeAction = ImeAction.Next
-                            ),
+                        KeyboardOptions(
+                            keyboardType = KeyboardType.Text,
+                            imeAction = ImeAction.Next
+                        ),
                         leadingIcon = {
                             Icon(
                                 ImageBitmap.imageResource(R.drawable.email),
@@ -141,10 +142,10 @@ fun LoginScreen() {
                             focusedLabelColor = if (isFocused) Color.Blue else Color.Gray
                         ),
                         keyboardOptions =
-                            KeyboardOptions(
-                                keyboardType = KeyboardType.Text,
-                                imeAction = ImeAction.Done
-                            ),
+                        KeyboardOptions(
+                            keyboardType = KeyboardType.Text,
+                            imeAction = ImeAction.Done
+                        ),
                         leadingIcon = {
                             Icon(
                                 ImageBitmap.imageResource(R.drawable.password),
@@ -208,20 +209,20 @@ fun LoginScreen() {
                     ) {
                         Spacer(
                             modifier =
-                                Modifier
-                                    .align(Alignment.Center)
-                                    .height(1.dp)
-                                    .fillMaxWidth()
-                                    .background(Color.LightGray)
+                            Modifier
+                                .align(Alignment.Center)
+                                .height(1.dp)
+                                .fillMaxWidth()
+                                .background(Color.LightGray)
                         )
                         Text(
                             text = "Or use",
                             color = Color.LightGray,
                             modifier =
-                                Modifier
-                                    .align(Alignment.Center)
-                                    .background(MaterialTheme.colorScheme.background)
-                                    .padding(horizontal = 16.dp)
+                            Modifier
+                                .align(Alignment.Center)
+                                .background(MaterialTheme.colorScheme.background)
+                                .padding(horizontal = 16.dp)
                         )
                     }
                 }

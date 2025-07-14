@@ -2,13 +2,14 @@ package com.shiki.kokocomposenew.bean
 
 sealed class HomeScreenItems {
 
-    object DialogsItem : HomeScreenItems()
-    object TabLayoutItem : HomeScreenItems()
-    object TextItem : HomeScreenItems()
-    object IconItem : HomeScreenItems()
-    object ButtonItem : HomeScreenItems()
-    object PullToRefreshBoxItem : HomeScreenItems()
-    object ImageItem : HomeScreenItems()
+    data object DialogsItem : HomeScreenItems()
+    data object TabLayoutItem : HomeScreenItems()
+    data object TextItem : HomeScreenItems()
+    data object IconItem : HomeScreenItems()
+    data object ButtonItem : HomeScreenItems()
+    data object PullToRefreshBoxItem : HomeScreenItems()
+    data object ImageItem : HomeScreenItems()
+    data object MenuItem : HomeScreenItems()
 
     val name: String
         get() = when (this) {
@@ -19,5 +20,6 @@ sealed class HomeScreenItems {
             is TabLayoutItem -> "TabLayout"
             is PullToRefreshBoxItem -> "PullToRefreshBox"
             is ImageItem -> "Image"
+            is MenuItem -> "Menu"
         }
 }
