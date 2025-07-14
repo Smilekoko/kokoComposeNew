@@ -26,13 +26,14 @@ import com.shiki.kokocomposenew.component.dialog.DialogActivity
 import com.shiki.kokocomposenew.component.pulltorefreshbox.PullToRefreshBoxActivity
 import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
 import com.shiki.kokocomposenew.component.text.TextActivity
-import com.shiki.kokocomposenew.data.HomeScreenItems
+import com.shiki.kokocomposenew.bean.HomeScreenItems
+import com.shiki.kokocomposenew.component.image.ImageActivity
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 val homeScreenListItems =
     listOf(
         HomeScreenItems.TextItem,
-        HomeScreenItems.IconItem,
+        HomeScreenItems.ImageItem,
         HomeScreenItems.ButtonItem,
         HomeScreenItems.DialogsItem,
         HomeScreenItems.TabLayoutItem,
@@ -112,6 +113,10 @@ fun HomeScreenListItemView(
 
                     is HomeScreenItems.PullToRefreshBoxItem -> {
                         context.startActivity(Intent(context, PullToRefreshBoxActivity::class.java))
+                    }
+
+                    is HomeScreenItems.ImageItem -> {
+                        context.startActivity(Intent(context, ImageActivity::class.java))
                     }
 
                 }

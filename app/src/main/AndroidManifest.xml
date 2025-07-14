@@ -40,13 +40,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".component.image.ImageActivity"
+            android:exported="true"
+            android:label="@string/title_activity_image"
+            android:theme="@style/Theme.KokoComposeNew">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".component.dialog.DialogActivity"
             android:exported="true"
             android:label="@string/title_activity_dialog"
             android:theme="@style/Theme.KokoComposeNew">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

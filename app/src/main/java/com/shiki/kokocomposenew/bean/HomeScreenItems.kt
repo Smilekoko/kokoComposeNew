@@ -1,4 +1,4 @@
-package com.shiki.kokocomposenew.data
+package com.shiki.kokocomposenew.bean
 
 sealed class HomeScreenItems {
 
@@ -8,6 +8,7 @@ sealed class HomeScreenItems {
     object IconItem : HomeScreenItems()
     object ButtonItem : HomeScreenItems()
     object PullToRefreshBoxItem : HomeScreenItems()
+    object ImageItem : HomeScreenItems()
 
     val name: String
         get() = when (this) {
@@ -17,5 +18,6 @@ sealed class HomeScreenItems {
             is DialogsItem -> "Dialogs"
             is TabLayoutItem -> "TabLayout"
             is PullToRefreshBoxItem -> "PullToRefreshBox"
+            is ImageItem -> "Image"
         }
 }
