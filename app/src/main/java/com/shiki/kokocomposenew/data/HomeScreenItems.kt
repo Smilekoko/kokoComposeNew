@@ -7,13 +7,15 @@ sealed class HomeScreenItems {
     object TextItem : HomeScreenItems()
     object IconItem : HomeScreenItems()
     object ButtonItem : HomeScreenItems()
+    object PullToRefreshBoxItem : HomeScreenItems()
 
     val name: String
         get() = when (this) {
+            is IconItem -> "Icon"
+            is TextItem -> "Text"
+            is ButtonItem -> "Button"
             is DialogsItem -> "Dialogs"
             is TabLayoutItem -> "TabLayout"
-            is TextItem -> "Text"
-            is IconItem -> "Icon"
-            is ButtonItem -> "Button"
+            is PullToRefreshBoxItem -> "PullToRefreshBox"
         }
 }

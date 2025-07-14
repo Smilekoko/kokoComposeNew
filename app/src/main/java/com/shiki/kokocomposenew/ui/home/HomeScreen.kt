@@ -23,18 +23,28 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.shiki.kokocomposenew.component.button.ButtonActivity
 import com.shiki.kokocomposenew.component.dialog.DialogActivity
+import com.shiki.kokocomposenew.component.pulltorefreshbox.PullToRefreshBoxActivity
 import com.shiki.kokocomposenew.component.tablayout.TabLayoutActivity
 import com.shiki.kokocomposenew.component.text.TextActivity
 import com.shiki.kokocomposenew.data.HomeScreenItems
 import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
+val homeScreenListItems =
+    listOf(
+        HomeScreenItems.TextItem,
+        HomeScreenItems.IconItem,
+        HomeScreenItems.ButtonItem,
+        HomeScreenItems.DialogsItem,
+        HomeScreenItems.TabLayoutItem,
+        HomeScreenItems.PullToRefreshBoxItem,
+    )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
 ) {
 
-    val list = remember { HomeDataProvider.homeScreenListItems }
+    val list = remember { homeScreenListItems }
 
     Scaffold(
         topBar = {
@@ -98,6 +108,10 @@ fun HomeScreenListItemView(
 
                     is HomeScreenItems.TabLayoutItem -> {
                         context.startActivity(Intent(context, TabLayoutActivity::class.java))
+                    }
+
+                    is HomeScreenItems.PullToRefreshBoxItem -> {
+                        context.startActivity(Intent(context, PullToRefreshBoxActivity::class.java))
                     }
 
                 }
