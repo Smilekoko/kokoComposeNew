@@ -98,7 +98,7 @@ fun DropdownMenuSpinnerDemo() {
 @Composable
 fun DropdownMenuGuide() {
     Column {
-        Text("DropdownMenu")
+        Text("DropdownMenu", modifier = Modifier.padding(start = 16.dp))
         DropdownMenuDemo()
         HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp), thickness = 1.dp)
     }
