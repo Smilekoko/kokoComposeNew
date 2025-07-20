@@ -13,7 +13,9 @@ class MenuActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            KokoComposeNewTheme { MenuScreen() }
+            KokoComposeNewTheme {
+                MenuScreen(backaction = { this.finish() })
+            }
         }
     }
 }

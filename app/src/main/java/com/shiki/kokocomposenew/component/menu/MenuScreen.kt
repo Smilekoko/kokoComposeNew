@@ -39,9 +39,7 @@ import com.shiki.kokocomposenew.ui.theme.KokoComposeNewTheme
 
 @ExperimentalMaterial3Api
 @Composable
-fun MenuScreen() {
-//    val context = LocalContext.current
-
+fun MenuScreen(backaction: () -> Unit = {}) {
     Scaffold(
         Modifier
             .navigationBarsPadding()
@@ -51,7 +49,7 @@ fun MenuScreen() {
             TopAppBar(
                 navigationIcon = {
                     IconButton(onClick = {
-//                        (context as Activity).finish()
+                        backaction.invoke()
                     }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -70,8 +68,31 @@ fun MenuScreen() {
                 .padding(paddingValue)
         ) {
             item { DropdownMenuGuide() }
+            item { DropdownMenuSpinnerDemo() }
         }
     }
+}
+
+@Composable
+fun DropdownMenuSpinnerDemo() {
+
+    val animaS = listOf(
+        "koko",
+        "JoJo",
+        "Shiki",
+        "Pika"
+    )
+    var selectedItem by remember { mutableStateOf("") }
+
+    DropdownMenuSpinner(
+        modifier = Modifier.padding(horizontal = 16.dp),
+        selectedItem = selectedItem,
+        defaultText = "Select Character...",
+        itemList = animaS,
+        onItemSelect = { index, item ->
+            selectedItem = animaS[index]
+        }
+    )
 }
 
 @Composable

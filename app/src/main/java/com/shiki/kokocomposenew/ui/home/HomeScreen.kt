@@ -124,6 +124,7 @@ fun HomeScreenListItemView(
                     is HomeScreenItems.MenuItem -> {
                         context.startActivity(Intent(context, MenuActivity::class.java))
                     }
+
                 }
             }, modifier = Modifier
                 .fillMaxWidth()
