@@ -42,4 +42,5 @@
     <string name="title_activity_swipe_refresh">SwipeRefreshActivity</string>
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_spinner">SpinnerActivity</string>
+    <string name="picture_clean">Picture Clean</string>
 </resources>
