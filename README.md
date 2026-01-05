@@ -4,8 +4,6 @@
 
 # Screenshot
 
-![home](images/home.jpg)
-
-|           Home           |   
-|:------------------------:|
-| ![home](images/home.jpg) | 
+|           Home           |           Animations           |
+|:------------------------:|:------------------------------:|
+| ![home](images/home.jpg) | ![home](images/animations.jpg) |
