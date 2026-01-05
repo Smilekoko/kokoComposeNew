@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat
+import java.util.*
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -21,6 +24,22 @@ android {
             useSupportLibrary = true
         }
     }
+
+    // 对于 AGP 7.0+
+    applicationVariants.configureEach {
+        val variant = this
+        outputs.configureEach {
+            if (this is com.android.build.gradle.internal.api.ApkVariantOutputImpl) {
+                val flavor = variant.flavorName
+                val buildType = variant.buildType.name
+                val version = variant.versionName
+                val timestamp = SimpleDateFormat("yyyyMMdd_HHmm", Locale.getDefault()).format(Date())
+
+                outputFileName = "Compose Camp-${version}.apk"
+            }
+        }
+    }
+
 
     buildTypes {
         release {
